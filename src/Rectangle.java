@@ -9,6 +9,12 @@ public class Rectangle
         width = w;
     }
 
+    public Rectangle(Rectangle r)
+    {
+        length = r.length;
+        width = r.width;
+    }
+
     public double getLength()
     {
         return length;
@@ -27,5 +33,11 @@ public class Rectangle
     public void setWidth(double w)
     {
         width = w;
+    }
+
+    public Rectangle copy()
+    {
+        Rectangle obj = new Rectangle(length, width);
+        return obj;
     }
 }
