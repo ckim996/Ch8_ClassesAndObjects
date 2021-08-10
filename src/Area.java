@@ -4,20 +4,18 @@ public class Area
     // Circle
     public static double getArea(double r)
     {
-        return Math.PI*
+        return Math.PI * (r*r);
     }
 
     // Rectangle
-    public Area(double l, double w)
+    public static double getArea(int l, int w)
     {
-        length = l;
-        width = w;
+        return l*w;
     }
 
     // Cylinder
-    public Area(double r, double h)
+    public static double getArea(double r, double h)
     {
-        radius = r;
-        height = h;
+        return Math.PI * (r*r) * h;
     }
 }
