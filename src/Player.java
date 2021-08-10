@@ -32,9 +32,23 @@ public class Player
 
     public int deductPoints(int p)
     {
+        if((this.points - p) < 1)
+        {
+            this.points = this.points - p + p;
+        }else {
+            this.points = this.points - p;
+        }
+        return this.points;
+    }
+
+    /*
+    public int deductPoints(int p)
+    {
         this.points = this.points - p;
         return this.points;
     }
+
+     */
 
     public int getNumOfTurn()
     {

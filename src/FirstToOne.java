@@ -4,7 +4,7 @@ public class FirstToOne
 {
     public static void main(String[] args)
     {
-        final int START_POINT = 30;
+        final int START_POINT = 10;
         final int NUM_OF_SIDES = 6;
         int NUM_OF_TURNS = 5;
         int round = 0;
@@ -66,6 +66,11 @@ public class FirstToOne
                         players[k].deductNumOfTurn();
                         System.out.println("Player " + (k+1) + " (" + players[k].getName() + " / Points:" + currentPoint + " / Number of Turns Left:" +players[k].getNumOfTurn() + ")");
                         System.out.println();
+                        if(players[k].getPoints() == 1)
+                        {
+                            getWinner(players);
+                            System.exit(0);
+                        }
                     }
                 }
                 System.out.println("-----------------------------------------");
